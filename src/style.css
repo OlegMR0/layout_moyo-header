@@ -1,3 +1,7 @@
+html {
+  --hover-link-color: #00acdc;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -5,8 +9,10 @@ body {
   font-style: normal;
 }
 
-.header img {
+.logo {
   display: block;
+  width: 40px;
+  height: 40px;
 }
 
 .header {
@@ -22,18 +28,12 @@ body {
 .header a {
   text-decoration: none;
   border: 0;
-  color: #000;
+  color: black;
   transition: color 0.15s linear;
 }
 
 .header a:hover {
-  color: #00acdc;
-}
-
-.logo {
-  width: 40px;
-  height: 40px;
-  left: 50px;
+  color: var(--hover-link-color);
 }
 
 .menu {
@@ -43,17 +43,18 @@ body {
   padding: 0;
 }
 
-.menu-link {
-  min-height: 150px;
+.menu__link {
+  text-transform: uppercase;
 }
 
-.menu-item:not(:first-child) {
+.menu__item:not(:first-child) {
   margin-left: 20px;
 }
 
-a.is-active::after {
-  content: ' ';
-  position: absolute;
-  background-color: #00acdc;
-  height: 50px;
+.is-active::after {
+  content: 'sa';
+  position: relative;
+  background-color: var(--hover-link-color);
+  height: 2px;
+  width: 100%;
 }
